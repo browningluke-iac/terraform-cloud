@@ -1,11 +1,3 @@
-locals {
-  project_yaml = yamldecode(var.project_config)
-  projects     = { for each in local.project_yaml : each.name => each }
-
-  workspace_yaml = yamldecode(var.workspace_config)
-  workspaces     = { for each in local.workspace_yaml : each.name => each }
-}
-
 resource "tfe_oauth_client" "github" {
   api_url          = "https://api.github.com"
   http_url         = "https://github.com"
@@ -14,13 +6,17 @@ resource "tfe_oauth_client" "github" {
 }
 
 resource "tfe_project" "projects" {
-  for_each = local.projects
+  for_each = {
+    for project in var.project_config : project.name => project
+  }
 
   name = each.key
 }
 
 resource "tfe_workspace" "workspaces" {
-  for_each = local.workspaces
+  for_each = {
+    for workspace in var.workspace_config : workspace.name => workspace
+  }
 
   # Meta
   name        = each.key

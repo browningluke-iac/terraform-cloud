@@ -31,8 +31,8 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_github_oauth_token"></a> [github\_oauth\_token](#input\_github\_oauth\_token) | PAT with scopes: admin:repo\_hook, repo | `string` | n/a | yes |
-| <a name="input_project_config"></a> [project\_config](#input\_project\_config) | yaml data defining projects | `string` | n/a | yes |
-| <a name="input_workspace_config"></a> [workspace\_config](#input\_workspace\_config) | yaml data defining projects | `string` | n/a | yes |
+| <a name="input_project_config"></a> [project\_config](#input\_project\_config) | data defining projects | <pre>list(object({<br>    name = string<br>  }))</pre> | n/a | yes |
+| <a name="input_workspace_config"></a> [workspace\_config](#input\_workspace\_config) | data defining workspaces | <pre>list(object({<br>    name              = string<br>    description       = optional(string, "")<br>    project           = optional(string, "")<br>    execution_mode    = optional(string, "local")<br>    auto_apply        = optional(bool, false)<br>    speculative_plans = optional(bool, true)<br>    queue_all_runs    = optional(bool, true)<br>    tags              = optional(list(string), [])<br>    vcs = optional(object({<br>      repo             = string<br>      working_dir      = optional(string, "/")<br>      branch           = optional(string, "")<br>      trigger_patterns = optional(list(string), [])<br>    }), null)<br>  }))</pre> | n/a | yes |
 
 ## Outputs
 

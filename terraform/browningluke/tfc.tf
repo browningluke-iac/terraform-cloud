@@ -7,6 +7,10 @@ module "tfe_org" {
 
   github_oauth_token = var.github_oauth_token
 
-  project_config   = file("${path.module}/../../data/${local.env}/projects.yml")
-  workspace_config = file("${path.module}/../../data/${local.env}/workspaces.yml")
+  project_config = yamldecode(
+    file("${path.module}/../../data/${local.env}/projects.yml")
+  )
+  workspace_config = yamldecode(
+    file("${path.module}/../../data/${local.env}/workspaces.yml")
+  )
 }
