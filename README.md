@@ -1,4 +1,1 @@
-# tf-template
-
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+# Terraform Cloud Infrastructure Repo
