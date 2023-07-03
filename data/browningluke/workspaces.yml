@@ -31,6 +31,8 @@
   vcs:
     repo: "browningluke-iac/github-repo"
     working_dir: "terraform/browningluke-tf"
+    trigger_patterns:
+      - "/data/browningluke-tf.yml"
 
 - name: homelab-github-browningluke-iac
   description: ""
@@ -40,6 +42,8 @@
   vcs:
     repo: "browningluke-iac/github-repo"
     working_dir: "terraform/browningluke-iac"
+    trigger_patterns:
+      - "/data/browningluke-iac.yml"
 
 # ==== Cloudflare ====
 - name: cloudflare-browningluke
@@ -50,3 +54,5 @@
   vcs:
     repo: "browningluke-iac/cloudflare"
     working_dir: "terraform/browningluke.dev"
+    trigger_patterns:
+      - "/data/browningluke.dev/**"
