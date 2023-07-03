@@ -1,13 +1,14 @@
 locals {
   env = "browningluke"
+
+  data_path = "${path.module}/../../data/${local.env}"
 }
 
 module "tfe_org" {
-  source  = "app.terraform.io/browningluke/organization/tfe"
-  version = "~> 1.0"
+  source = "../_modules/tfe-org"
 
   github_oauth_token = var.github_oauth_token
 
-  project_config   = file("${path.module}/../../data/${local.env}/projects.yml")
-  workspace_config = file("${path.module}/../../data/${local.env}/workspaces.yml")
+  project_config   = yamldecode(file("${local.data_path}/projects.yml"))
+  workspace_config = yamldecode(file("${local.data_path}/workspaces.yml"))
 }
