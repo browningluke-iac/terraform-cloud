@@ -3,8 +3,7 @@ locals {
 }
 
 module "tfe_org" {
-  source  = "app.terraform.io/browningluke/organization/tfe"
-  version = "~> 1.0"
+  source = "../_modules/tfe-org"
 
   github_oauth_token = var.github_oauth_token
 

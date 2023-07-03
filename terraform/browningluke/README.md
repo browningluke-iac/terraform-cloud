@@ -16,7 +16,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_tfe_org"></a> [tfe\_org](#module\_tfe\_org) | app.terraform.io/browningluke/organization/tfe | ~> 1.0 |
+| <a name="module_tfe_org"></a> [tfe\_org](#module\_tfe\_org) | ../_modules/tfe-org | n/a |
 
 ## Resources
 
