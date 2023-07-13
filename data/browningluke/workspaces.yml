@@ -64,15 +64,15 @@
       - "/terraform/_modules/**"
 
 # ==== SSO ====
-- name: sso-browningluke
+- name: sso-oci-authentik-ca-toronto-1
   description: ""
   project: homelab
   execution_mode: remote
   tags: ['sso', 'meta']
   vcs:
     repo: "browningluke-iac/sso"
-    working_dir: "terraform/browningluke.dev"
+    working_dir: "terraform/oci-authentik-ca-toronto-1"
     trigger_patterns:
-      - "/data/browningluke.dev/**"
-      - "/terraform/browningluke.dev/**"
+      - "/data/oci-authentik-ca-toronto-1/**"
+      - "/terraform/oci-authentik-ca-toronto-1/**"
       - "/terraform/_modules/**"
