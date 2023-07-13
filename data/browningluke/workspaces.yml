@@ -93,3 +93,31 @@
       - "/data/oci-authentik-ca-toronto-1/**"
       - "/terraform/oci-authentik-ca-toronto-1/**"
       - "/terraform/_modules/**"
+
+# ==== Vault ====
+- name: vault-sol-vault
+  description: ""
+  project: homelab
+  execution_mode: remote
+  tags: ['vault', 'meta']
+  vcs:
+    repo: "browningluke-iac/vault"
+    working_dir: "terraform/sol-vault"
+    trigger_patterns:
+      - "/data/sol-vault/**"
+      - "/terraform/sol-vault/**"
+      - "/terraform/_modules/**"
+
+- name: sso-infra-sol-vault
+  description: ""
+  project: homelab
+  thing: null
+  execution_mode: remote
+  tags: ['vault', 'meta']
+  vcs:
+    repo: "browningluke-iac/vault-infra"
+    working_dir: "terraform/sol-vault"
+    trigger_patterns:
+      - "/data/sol-vault/**"
+      - "/terraform/sol-vault/**"
+      - "/terraform/_modules/**"
