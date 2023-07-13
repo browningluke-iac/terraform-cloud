@@ -76,3 +76,16 @@
       - "/data/oci-authentik-ca-toronto-1/**"
       - "/terraform/oci-authentik-ca-toronto-1/**"
       - "/terraform/_modules/**"
+
+- name: sso-infra-oci-authentik-ca-toronto-1
+  description: ""
+  project: homelab
+  execution_mode: remote
+  tags: ['sso', 'meta']
+  vcs:
+    repo: "browningluke-iac/sso-infra"
+    working_dir: "terraform/oci-authentik-ca-toronto-1"
+    trigger_patterns:
+      - "/data/oci-authentik-ca-toronto-1/**"
+      - "/terraform/oci-authentik-ca-toronto-1/**"
+      - "/terraform/_modules/**"
