@@ -22,6 +22,10 @@ variable "workspace_config" {
     speculative_plans = optional(bool, true)
     queue_all_runs    = optional(bool, true)
     tags              = optional(list(string), [])
+    remote_state = optional(object({
+      global     = optional(bool, true)
+      workspaces = optional(list(string), [])
+    }), {})
     vcs = optional(object({
       repo             = string
       working_dir      = optional(string, "/")

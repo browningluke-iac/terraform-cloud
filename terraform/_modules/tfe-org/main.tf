@@ -35,6 +35,10 @@ resource "tfe_workspace" "workspaces" {
 
   trigger_patterns = try(each.value.vcs.trigger_patterns, null)
 
+  # Remote state
+  global_remote_state       = each.value.remote_state.global
+  remote_state_consumer_ids = each.value.remote_state.workspaces
+
   # VCS
   dynamic "vcs_repo" {
     for_each = each.value.vcs != null ? [each.value.vcs] : []

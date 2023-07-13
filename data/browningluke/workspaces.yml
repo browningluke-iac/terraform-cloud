@@ -6,6 +6,9 @@
 #   auto_apply: false           # default: false
 #   speculative_plans: true     # default: true
 #   tags: ["tag1", "tag2"]      # default: []
+#   remote_state:
+#     global: true              # default: true
+#     workspaces: []            # default: []
 #   vcs:
 #     repo: "user/repo"         # default: no vcs trigger
 #     working_dir: "some/path"  # default: repo root
@@ -80,6 +83,7 @@
 - name: sso-infra-oci-authentik-ca-toronto-1
   description: ""
   project: homelab
+  thing: null
   execution_mode: remote
   tags: ['sso', 'meta']
   vcs:
