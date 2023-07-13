@@ -108,7 +108,7 @@
       - "/terraform/sol-vault/**"
       - "/terraform/_modules/**"
 
-- name: sso-infra-sol-vault
+- name: vault-infra-sol-vault
   description: ""
   project: homelab
   thing: null
