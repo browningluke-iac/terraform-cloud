@@ -23,7 +23,7 @@
     working_dir: "terraform/sol/swarms/sol-ds"
 
 # ==== Github ====
-- name: homelab-github-browningluke-tf
+- name: github-browningluke-tf
   description: ""
   project: homelab
   execution_mode: remote
@@ -36,7 +36,7 @@
       - "/terraform/browningluke-tf/**"
       - "/terraform/_modules/**"
 
-- name: homelab-github-browningluke-iac
+- name: github-browningluke-iac
   description: ""
   project: homelab
   execution_mode: remote
