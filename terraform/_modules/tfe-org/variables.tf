@@ -18,6 +18,7 @@ variable "workspace_config" {
     description       = optional(string, "")
     project           = optional(string, "")
     execution_mode    = optional(string, "local")
+    agent_pool        = optional(string, null)
     auto_apply        = optional(bool, false)
     speculative_plans = optional(bool, true)
     queue_all_runs    = optional(bool, true)
@@ -33,4 +34,9 @@ variable "workspace_config" {
       trigger_patterns = optional(list(string), [])
     }), null)
   }))
+}
+
+variable "agent_pool_map" {
+  description = "map of agent pool names to ids"
+  type        = map(string)
 }

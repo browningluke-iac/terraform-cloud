@@ -29,6 +29,8 @@ resource "tfe_workspace" "workspaces" {
   speculative_enabled = each.value.speculative_plans
   auto_apply          = each.value.auto_apply
 
+  agent_pool_id = each.value.execution_mode == "agent" ? var.agent_pool_map[each.value.agent_pool] : null
+
   queue_all_runs = each.value.queue_all_runs
 
   working_directory = try(each.value.vcs.working_dir, null)
