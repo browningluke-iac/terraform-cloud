@@ -61,7 +61,8 @@
 - name: sso-oci-authentik-ca-toronto-1
   description: ""
   project: homelab
-  execution_mode: remote
+  execution_mode: agent
+  agent_pool: sol-homelab
   tags: ['sso', 'meta']
   vcs:
     repo: "browningluke-iac/sso"
@@ -89,7 +90,8 @@
 - name: vault-sol-vault
   description: ""
   project: homelab
-  execution_mode: remote
+  execution_mode: agent
+  agent_pool: sol-homelab
   tags: ['vault', 'meta']
   vcs:
     repo: "browningluke-iac/vault"
