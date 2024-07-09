@@ -12,3 +12,8 @@ module "tfe_org" {
   project_config   = yamldecode(file("${local.data_path}/projects.yml"))
   workspace_config = yamldecode(file("${local.data_path}/workspaces.yml"))
 }
+
+resource "tfe_agent_pool" "sol-homelab" {
+  name         = "sol-homelab"
+  organization = local.env
+}
