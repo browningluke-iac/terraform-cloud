@@ -15,15 +15,6 @@
 #     branch: "some_branch"     # default: default branch
 
 ---
-# ==== Solis ====
-- name: sol-ds
-  description: ""
-  project: homelab
-  execution_mode: local
-  tags: ['sol', 'pve']
-  vcs:
-    repo: "browningluke-org/homelab"
-    working_dir: "terraform/sol/swarms/sol-ds"
 
 # ==== Github ====
 - name: github-browningluke-tf
