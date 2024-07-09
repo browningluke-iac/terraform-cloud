@@ -114,3 +114,18 @@
       - "/data/sol-vault/**"
       - "/terraform/sol-vault/**"
       - "/terraform/_modules/**"
+
+# ==== PVE ====
+- name: pve-lxc-sol-pihole
+  description: ""
+  project: homelab
+  execution_mode: agent
+  agent_pool: sol-homelab
+  tags: ['pve']
+  vcs:
+    repo: "browningluke-iac/pve-lxcs"
+    working_dir: "terraform/sol-pihole"
+    trigger_patterns:
+      - "/data/sol-pihole/**"
+      - "/terraform/sol-pihole/**"
+      - "/terraform/_modules/**"
