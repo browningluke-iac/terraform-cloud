@@ -115,3 +115,18 @@
       - "/data/sol-pihole/**"
       - "/terraform/sol-pihole/**"
       - "/terraform/_modules/**"
+
+
+- name: pve-template-sol-ubuntu-2404
+  description: ""
+  project: homelab
+  execution_mode: agent
+  agent_pool: sol-homelab
+  tags: ['pve', 'template']
+  vcs:
+    repo: "browningluke-iac/pve-templates"
+    working_dir: "terraform/sol-ubuntu-2404"
+    trigger_patterns:
+      - "/data/sol-ubuntu-2404/**"
+      - "/terraform/sol-ubuntu-2404/**"
+      - "/terraform/_modules/**"
